@@ -66,7 +66,7 @@ const CapturingPage = ({ stream, onComplete }: CapturingPageProps) => {
 		setStatusText(texts[shot] || '');
 	};
 
-	const captureImage = (shot: number) => {
+	const captureImage = (_shot: number) => {
 		if (!canvasRef.current || !videoRef.current || captured.length >= 3) return;
 		const ctx = canvasRef.current.getContext('2d');
 		if (!ctx) return;
