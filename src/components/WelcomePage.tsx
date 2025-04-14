@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import '../styles/welcomePage.css';
+import Credits from './Cridits';
 
 interface WelcomePageProps {
 	onStart: () => void;
@@ -24,6 +25,7 @@ const WelcomePage = ({ onStart }: WelcomePageProps) => {
 			<button onClick={onStart} className='start-button'>
 				START
 			</button>
+			<Credits />
 		</div>
 	);
 };

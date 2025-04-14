@@ -1,9 +1,12 @@
 .welcome-wrapper {
 	display: flex;
-	gap: 1.5rem;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
-	justify-content: center;
+	height: 100vh;
+	padding: 2rem;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 .welcome-wrapper h1 {
