@@ -16,16 +16,21 @@ const WelcomePage = ({ onStart }: WelcomePageProps) => {
 
 	return (
 		<div className='welcome-wrapper'>
-			<img
-				src='/2pookie.jpg'
-				alt='Pookie Booth Logo'
-				className='welcome-logo'
-			/>
-			<h1>PookieBooth</h1>
-			<button onClick={onStart} className='start-button'>
-				START
-			</button>
-			<Credits />
+			<div className='main-content'>
+				<img
+					src='/2pookie.jpg'
+					alt='Pookie Booth Logo'
+					className='welcome-logo'
+				/>
+				<h1>PookieBooth</h1>
+				<button onClick={onStart} className='start-button'>
+					START
+				</button>
+			</div>
+
+			<div className='credits-wrapper'>
+				<Credits />
+			</div>
 		</div>
 	);
 };

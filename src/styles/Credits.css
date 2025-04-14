@@ -1,5 +1,7 @@
-.ending-credits {
-	font-size: 0.9rem;
-	color: #c2c2c2;
+.credits-wrapper {
 	margin-top: auto;
+	padding-top: 2rem;
+	text-align: center;
+	font-size: 0.85rem;
+	color: #cbcbcb;
 }
