@@ -64,4 +64,8 @@
 	.preview-scroll {
 		overflow-y: auto;
 	}
+
+	.preview-wrapper {
+		padding-bottom: 10rem;
+	}
 }
