@@ -11,9 +11,7 @@ const CapturingPage = ({ stream, onComplete }: CapturingPageProps) => {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null);
 	const [captured, setCaptured] = useState<string[]>([]);
 	const [dotStep, setDotStep] = useState(0);
-	const [statusText, setStatusText] = useState(
-		'Get ready for the first photo...',
-	);
+	const [statusText, setStatusText] = useState('Get ready for first photo...');
 	const countdownRef = useRef<NodeJS.Timeout | null>(null);
 	const defaultFilter = 'grayscale(0.9) contrast(1.3) brightness(0.8)';
 
@@ -59,9 +57,9 @@ const CapturingPage = ({ stream, onComplete }: CapturingPageProps) => {
 
 	const updateStatusText = (shot: number) => {
 		const texts = [
-			'Get ready for the first photo...',
-			'Get ready for the second photo...',
-			'Get ready for the third photo...',
+			'Get ready for first photo...',
+			'Get ready for second photo...',
+			'Get ready for third photo...',
 		];
 		setStatusText(texts[shot] || '');
 	};

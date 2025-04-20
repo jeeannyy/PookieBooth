@@ -29,6 +29,9 @@ button {
 	cursor: pointer;
 	font-weight: bold;
 	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .app {

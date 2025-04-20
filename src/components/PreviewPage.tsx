@@ -39,7 +39,7 @@ const PreviewPage = ({ images, sticker, onReset }: PreviewPageProps) => {
 	return (
 		<div className='preview-scroll'>
 			<div className='preview-wrapper'>
-				<h2>Photo Strip Preview</h2>
+				<h2>Photo Preview</h2>
 
 				<div className='color-options'>
 					{colors.map((color) => (
