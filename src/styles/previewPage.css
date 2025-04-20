@@ -1,5 +1,10 @@
+.preview-scroll {
+	height: 100vh;
+	overflow: hidden;
+}
 .preview-wrapper {
 	text-align: center;
+	padding-bottom: 3rem;
 }
 
 .preview-wrapper h2 {
@@ -53,4 +58,10 @@
 
 .preview-button:active {
 	transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+	.preview-scroll {
+		overflow-y: auto;
+	}
 }

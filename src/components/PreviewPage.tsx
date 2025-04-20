@@ -37,41 +37,43 @@ const PreviewPage = ({ images, sticker, onReset }: PreviewPageProps) => {
 	}, []);
 
 	return (
-		<div className='preview-wrapper'>
-			<h2>Photo Strip Preview</h2>
+		<div className='preview-scroll'>
+			<div className='preview-wrapper'>
+				<h2>Photo Strip Preview</h2>
 
-			<div className='color-options'>
-				{colors.map((color) => (
-					<button
-						key={color.value}
-						onClick={() => setStripColor(color.value)}
-						style={{
-							backgroundColor: color.value,
-							color: color.value === '#212121' ? 'white' : 'black',
-						}}
-					></button>
-				))}
-			</div>
+				<div className='color-options'>
+					{colors.map((color) => (
+						<button
+							key={color.value}
+							onClick={() => setStripColor(color.value)}
+							style={{
+								backgroundColor: color.value,
+								color: color.value === '#212121' ? 'white' : 'black',
+							}}
+						></button>
+					))}
+				</div>
 
-			<div
-				id='strip'
-				className='strip-container'
-				style={{ background: stripColor }}
-			>
-				{images.map((src, i) => (
-					<div key={i} className='strip-image-wrapper'>
-						<img src={src} alt={`preview-${i}`} width={200} />
-						{sticker && <span className='sticker'>{sticker}</span>}
-					</div>
-				))}
-			</div>
+				<div
+					id='strip'
+					className='strip-container'
+					style={{ background: stripColor }}
+				>
+					{images.map((src, i) => (
+						<div key={i} className='strip-image-wrapper'>
+							<img src={src} alt={`preview-${i}`} width={200} />
+							{sticker && <span className='sticker'>{sticker}</span>}
+						</div>
+					))}
+				</div>
 
-			<button onClick={downloadStrip} className='preview-button'>
-				Download Photo
-			</button>
-			<button onClick={onReset} className='preview-button'>
-				Retake
-			</button>
+				<button onClick={downloadStrip} className='preview-button'>
+					Download Photo
+				</button>
+				<button onClick={onReset} className='preview-button'>
+					Retake
+				</button>
+			</div>{' '}
 		</div>
 	);
 };

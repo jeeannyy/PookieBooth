@@ -71,10 +71,15 @@ const CapturingPage = ({ stream, onComplete }: CapturingPageProps) => {
 		const ctx = canvasRef.current.getContext('2d');
 		if (!ctx) return;
 
-		canvasRef.current.width = videoRef.current.videoWidth;
-		canvasRef.current.height = videoRef.current.videoHeight;
+		const width = videoRef.current.videoWidth;
+		const height = videoRef.current.videoHeight;
+
+		canvasRef.current.width = width;
+		canvasRef.current.height = height;
+
 		ctx.filter = defaultFilter;
-		ctx.drawImage(videoRef.current, 0, 0);
+		ctx.drawImage(videoRef.current, 0, 0, width, height);
+
 		const imageData = canvasRef.current.toDataURL('image/png');
 
 		setCaptured((prev) => {
